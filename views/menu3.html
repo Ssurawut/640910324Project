@@ -1,0 +1,245 @@
+<!-- views/menu1.html -->
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Food For You - Menu</title>
+    <link rel="stylesheet" href="style_menu3.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="bar_content">
+                <h1>DATABASE<br>RESTAURANT</h1>
+            </div>
+            <div class="logo-container">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="/Restaurant_Database/home">Home</a></li>
+                    <li>
+                        <a1 href="/Restaurant_Database/menu">Menu</a1>
+                    </li>
+                    <li><a href="/Restaurant_Database/login">Logout</a></li>
+                </ul>
+                <div class="search-cart">
+                    <input type="text" placeholder="Search">
+                    <button>Search</button>
+                    <div class="cart-icon" onclick="toggleSidebar()"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-type">
+            <a href="/Restaurant_Database/menu1">
+                <button class="food1">
+                    <h1>อาหารจานเดียว</h1>
+                </button>
+            </a>
+            <a href="/Restaurant_Database/menu2">
+                <button class="food2">
+                    <h1>กับข้าว</h1>
+                </button>
+            </a>
+            <a href="/Restaurant_Database/menu3">
+                <button class="food3">
+                    <h1>เครื่องดื่ม & อื่น</h1>
+                </button>
+            </a>
+        </div>
+        
+        <div id="menu-list" class="menu-list">
+            <div class="menu-item1">
+                <div id="menu-list" class="menu-list">
+                    <div class="menu-item1">
+
+                        <!-- ข้าวผัดกะเพราหมูสับ -->
+                        <button id="menu1" class="menu-item" onclick="showPopup('popup1')">
+                            <div class="menu-item-image1"></div>
+                            <p>ข้าวผัดกะเพราหมูสับ</p>
+                            <p>50 บาท</p>
+                            <p>ประเภท:อาหารจานเดียว</p>
+                        </button>
+                        <div id="popup1" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup1')">&times;</span>
+                                <h2>ข้าวผัดกะเพราหมูสับ</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 50 บาท</p>
+                                <button class="order-btn" onclick="orderFood('ข้าวผัดกะเพราหมูสับ', 50)">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                
+                        <!-- ข้าวผัดพริกแกงหมู -->
+                        <button class="menu-item" onclick="showPopup('popup2')">
+                            <div class="menu-item-image2"></div>
+                            <p>ข้าวผัดพริกแกงหมู</p>
+                            <p>45 บาท</p>
+                            <p>ประเภท:อาหารจานเดียว</p>
+                        </button>
+                        <div id="popup2" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                                <h2>ข้าวผัดพริกแกงหมู</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 45 บาท</p>
+                                <button class="order-btn">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                
+                        <!-- ข้าวผัดคะน้าหมูกรอบ -->
+                        <button class="menu-item" onclick="showPopup('popup3')">
+                            <div class="menu-item-image3"></div>
+                            <p>ข้าวผัดคะน้าหมูกรอบ</p>
+                            <p>60 บาท</p>
+                            <p>ประเภท:อาหารจานเดียว</p>
+                        </button>
+                        <div id="popup3" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup3')">&times;</span>
+                                <h2>ข้าวผัดคะน้าหมูกรอบ</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 60 บาท</p>
+                                <button class="order-btn">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                
+                        <!-- ข้าวหมูทอดกระเทียม -->
+                        <button class="menu-item" onclick="showPopup('popup4')">
+                            <div class="menu-item-image4"></div>
+                            <p>ข้าวหมูทอดกระเทียม</p>
+                            <p>50 บาท</p>
+                            <p>ประเภท:อาหารจานเดียว</p>
+                        </button>
+                        <div id="popup4" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup4')">&times;</span>
+                                <h2>ข้าวหมูทอดกระเทียม</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 50 บาท</p>
+                                <button class="order-btn">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="menu-item2">
+                        <!-- ข้าวผัดปู -->
+                        <button class="menu-item" onclick="showPopup('popup5')">
+                            <div class="menu-item-image5"></div>
+                            <p>ข้าวผัดปู</p>
+                            <p>80 บาท</p>
+                            <p>ประเภท:อาหารจานเดียว</p>
+                        </button>
+                        <div id="popup5" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup5')">&times;</span>
+                                <h2>ข้าวผัดปู</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 80 บาท</p>
+                                <button class="order-btn">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                
+                        <!-- ผัดไทยกุ้งสด -->
+                        <button class="menu-item" onclick="showPopup('popup6')">
+                            <div class="menu-item-image6"></div>
+                            <p>ผัดไทยกุ้งสด</p>
+                            <p>60 บาท</p>
+                            <p>ประเภท:อาหารจานเดียว</p>
+                        </button>
+                        <div id="popup6" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup6')">&times;</span>
+                                <h2>ผัดไทยกุ้งสด</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 60 บาท</p>
+                                <button class="order-btn">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                
+                        <!-- ข้าวไข่เจียว -->
+                        <button class="menu-item" onclick="showPopup('popup7')">
+                            <div class="menu-item-image7"></div>
+                            <p>ข้าวไข่เจียว</p>
+                            <p>40 บาท</p>
+                            <p>ประเภท:อาหารจานเดียว</p>
+                        </button>
+                        <div id="popup7" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup7')">&times;</span>
+                                <h2>ข้าวไข่เจียว</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 40 บาท</p>
+                                <button class="order-btn">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                
+                        <!-- สุกี้น้ำ -->
+                        <button class="menu-item" onclick="showPopup('popup8')">
+                            <div class="menu-item-image8"></div>
+                            <p>สุกี้น้ำ</p>
+                            <p>50 บาท</p>
+                            <p>ประเภท:กับข้าว</p>
+                        </button>
+                        <div id="popup8" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('popup8')">&times;</span>
+                                <h2>สุกี้น้ำ</h2>
+                                <p>รายละเอียดอาหาร...</p>
+                                <p>ราคา: 50 บาท</p>
+                                <button class="order-btn">สั่งอาหาร</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+    </main>
+
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-button" onclick="toggleSidebar()">X</button>
+        <h2>ตะกร้าของฉัน</h2>
+
+        <!-- Cart items -->
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/50" alt="food">
+            <div class="cart-item-info">
+                <div class="cart-item-title">ข้าวกระเพราหมูสับ</div>
+                <div class="cart-item-details">1 รายการ ราคา 50 บาท</div>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="bottom-bar">
+            <span class="total-price">ทั้งหมด 50 บาท</span>
+            <button class="cancel-btn">ยกเลิก</button>
+            <button class="order-btn" onclick="window.location.href='/Restaurant_Database/status'">สั่ง</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+        function showPopup(popupId) {
+    document.getElementById(popupId).style.display = 'flex'; // แสดง Popup
+}
+
+function closePopup(popupId) {
+    document.getElementById(popupId).style.display = 'none'; // ปิด Popup
+}
+
+
+    </script>
+
+    <script src="script_menu.js"></script>
+</body>
+
+</html>

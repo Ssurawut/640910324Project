@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Database</title>
+    <link rel="stylesheet" href="style_orderlist.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="header-logo">
+            <div class="logo-container"></div>
+            <div class="logo-topbar"></div>
+        </div>
+        <div class="text_header">
+            <h1>RESTAURANT DATABASE</h1>
+            <div class="container"></div>
+        </div>
+        <div class="admin-text">ADMIN</div>
+        <div class="person-icon"></div>
+    </div>
+
+    <main>
+        <div class="orders-container">
+            <div class="home">
+                <ul>
+                    <li><a href="/Restaurant_Database/orderlist">หน้าหลัก</a></li>
+                </ul>
+            </div>
+            <div class="payment">
+                <ul>
+                    <li><a href="/Restaurant_Database/payment">ชำระเงิน</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="orderlist">
+            <div class="profile">
+                <div class="profile-icon"></div>
+                <div class="profile-text">UserA</div>
+            </div>
+            <div class="order">
+                <div class="content">รายการอาหาร : -ข้าวผัดกะเพราหมูสับ</div>
+            </div>
+        </div>
+        <button class = "btn-cancel">ยกเลิก</button>
+        <button class = "btn-wait-payment">เสร็จแล้ว</button>
+    </main>
+
+    <!-- <script>
+        async function fetchOrders() {
+            const response = await fetch('/api/orders/all');
+            const orders = await response.json();
+            const container = document.getElementById('orders-container');
+            container.innerHTML = '';
+            
+            orders.forEach(order => {
+                const card = document.createElement('div');
+                card.className = 'order-card';
+                card.innerHTML = `
+                    <h3>${order.user_id}</h3>
+                    <p>รายการอาหาร: ${order.order_items.join(', ')}</p>
+                    <button class="btn btn-danger btn-cancel" onclick="updateOrderStatus('${order.order_id}', 'cancel')">ยกเลิก</button>
+                    <button class="btn btn-success btn-wait-payment" onclick="updateOrderStatus('${order.order_id}', 'wait_payment')">เสร็จแล้ว</button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        async function updateOrderStatus(order_id, status) {
+            await fetch(`/api/orders/${order_id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ order_status: status })
+            });
+            fetchOrders();
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchOrders);
+    </script> -->
+</body>
+
+</html>

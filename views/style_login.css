@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.topbar {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity here */
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 50px;
+  font-family: 'inter', sans-serif;
+  font-weight: 100;
+  color: #000000; /* Text color */
+  text-shadow: 3px 3px 0 #ffffff, -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff;
+}
+
+.header h2 {
+  font-size: 40px;
+  font-family: 'inter', sans-serif;
+  font-weight: 100;
+  color: #000000; /* Text color */
+  text-shadow: 3px 3px 0 #ffffff, -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 108px;
+  height: 108px;
+  background-color: #D04F2B;
+  border-radius: 50%;
+}
+
+.logo {
+  background-image: url('./images/logotomyumgung.png'); 
+  width: 96px;
+  height: 96px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
+  background-image: url('./images/Thai-food-2.png');
+  background-size: cover;
+}
+
+.sidebar {
+  display: flex;
+  right: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #c1440e;
+  color: white;
+  padding: 50px 10px;
+  height: 100%;
+  width: 243px;
+}
+
+.sidebar .sidebar-content {
+  z-index: 99;
+  align-items: center;
+}
+
+.sidebar h2 {
+  z-index: 99;
+  font-size: 55px;
+  font-family: 'inter', sans-serif;
+  color: #ffffff; 
+}
+
+.underbar {
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-end;
+  margin-top: -114px;
+  z-index: 0;
+  align-items: center;
+  background-color: #c1440e;
+  color: white;
+  height: 120px;
+  width: 100%;
+  padding-right: 200px; 
+}
+
+.underbar .underbar-content {
+  z-index: 99;
+  align-items: center;
+}
+
+.underbar h2 {
+  font-size: 55px;
+  font-family: 'inter', sans-serif;
+  color: #ffffff; 
+}
+
+.container_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.6); /* Adjust opacity here */
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 650px; 
+  height: 282px;
+}
+
+.login-box h2 {
+  font-size: 40px;
+  color: #000000; /* Text color */
+}
+
+.login-box input {
+  font-size: 24px;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0; /* Adds space between the fields */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  font-size: 24px;
+  width: 100%; /* Makes the button take up the full width */
+  padding: 5px;
+  margin: 5px 0px 5px 0px;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #adaaa6;
+}

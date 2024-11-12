@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style_register.css">
+</head>
+<body>
+    <div class="register-container">
+        <span class="close-button" onclick="window.location.href='/Restaurant_Database/login'">&times;</span>
+        <h1>Welcome</h1>
+        <form id="registerForm">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm" placeholder="Confirm" required>
+            <button type="submit">Register</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            if (data.password !== data.confirm) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            const response = await fetch('/api/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username: data.username, password: data.password }),
+            });
+
+            const result = await response.json();
+            
+            if (response.ok) {
+                document.getElementById('message').innerText = "Register Success";
+                setTimeout(() => {
+                    window.location.href = "/Restaurant_Database/login";
+                }, 2000);
+            } else {
+                alert(result.error || "Registration failed");
+            }
+        });
+    </script>
+</body>
+</html>

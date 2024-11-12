@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Food For You - Home</title>
+    <link rel="stylesheet" href="style_home.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="bar_content">
+                <h1>DATABASE<br>RESTAURANT</h1>
+            </div>
+            <div class="logo-container">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a1 href="/Restaurant_Database/home">Home</a1></li>
+                    <li><a href="/Restaurant_Database/menu1">Menu</a></li>
+                    <li><a href="/Restaurant_Database/login">Logout</a></li>
+                </ul>
+                <div class="search-cart">
+                    <input type="text" placeholder="Search">
+                    <button>Search</button>
+                    <div class="cart-icon" onclick="toggleSidebar()"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome">
+            <h2>Welcome</h2>
+            <h3>Thai food</h3>
+            <p>We would like to give you<br>a great experience<br>with delicious food.<br>Thank you.</p>
+        </div>
+        <div class="main-image-container">
+            <div class="main-image"></div>
+        </div>
+    </main>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-button" onclick="toggleSidebar()">X</button>
+        <h2>ตะกร้าของฉัน</h2>
+        
+        <!-- รายการสินค้าในตะกร้า -->
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/50" alt="food">
+            <div class="cart-item-info">
+                <div class="cart-item-title">ข้าวกระเพราหมูสับ</div>
+                <div class="cart-item-details">1 รายการ ราคา 50 บาท</div>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="bottom-bar">
+            <span class="total-price">ทั้งหมด 150 บาท</span>
+            <button class="cancel-btn">ยกเลิก</button>
+            <button class="order-btn" onclick="window.location.href='/Restaurant_Database/status'">สั่ง</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to toggle the sidebar
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

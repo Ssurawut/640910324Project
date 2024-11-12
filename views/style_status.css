@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #E06E4F;
+}
+
+.topbar {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.topbar .header-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; ;
+    width: 200px;
+    height: 200px;
+    background-color:#ffffff;
+    border-radius: 50%;
+}
+
+.topbar .header-logo .logo-topbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/logotomyumgung.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.text_header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px; ;
+    width: 35%;
+    height: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 300px;
+}
+
+.text_header h1 {
+    font-size: 35px;
+    font-family: 'inter', sans-serif;
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5px;
+    width: 83%;
+    background-color: #E06E4F;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+}
+
+.status h1 {
+    font-size: 25px;
+    font-family: 'inter', sans-serif;
+    color: #000000;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.status .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 300px;
+    height: 50px;
+    width: 40%;
+    background-color: #E06E4F;
+    border-radius: 10px;
+}
+
+.status .back-button a {
+    font-size: 20px;
+    font-family: 'inter', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.status .status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    width: 100%;
+    background-color: #E06E4F;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.cooking-icon {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 150px;
+    width: 150px;
+    background-image: url('./icons/iconstatus.png');
+    background-size: cover;
+}
+
+.status-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.status-text h2 {
+    font-size: 40px;
+    font-family: 'inter', sans-serif;
+    color: #000000;
+}
+
+.status-text p {
+    font-size: 30px;
+    font-family: 'inter', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+main .back-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+
+
